@@ -81,10 +81,11 @@ async def joke(event):
 
 @bot.on(events.NewMessage(pattern='/news'))
 async def news(event):
+    newsapi = os.environ.get("NEWS_API")
     query_params = {
         "source": "news-api",
         "sortBy": "top",
-        "apiKey": "5f1413a68acb460bacbbc67e5d100386"
+        "apiKey": newsapi
     }
     main_url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=5f1413a68acb460bacbbc67e5d100386"
 
