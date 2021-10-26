@@ -8,9 +8,9 @@ import requests
 
 os.system("clear")
 
+token = os.environ.get("BOT_TOKEN")
 bot = TelegramClient('bot', 8009880, '86d78606689d61db9a904e167a4bbd50').start(
-    bot_token='1949602652:AAGi70ns-78T6Gqa3PtVnE1Uryc1T-BCdrc')
-
+    bot_token=token)
 
 @bot.on(events.NewMessage(pattern='/start'))
 async def start(event):
