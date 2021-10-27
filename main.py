@@ -12,6 +12,7 @@ token = os.environ.get("BOT_TOKEN")
 bot = TelegramClient('bot', 8009880, '86d78606689d61db9a904e167a4bbd50').start(
     bot_token=token)
 
+
 @bot.on(events.NewMessage(pattern='/start'))
 async def start(event):
     """Send a message when the command /start is issued."""
@@ -49,6 +50,7 @@ List Of all Commands
 /wassup - EasterEgg
 /whoami - Displays You User Id of Telegram
 /joke - Displays a Random Joke
+/news - Displays a Top 20 Headlines
 
 Some Other USeful Links:
 
