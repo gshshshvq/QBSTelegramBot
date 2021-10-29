@@ -186,24 +186,12 @@ async def handler(event):
         await event.reply('Bye Bye!!')
 
 
-@bot.on(events.NewMessage(pattern='/userid'))
-async def useridgetter(target):
-    """ For .userid command, returns the ID of the target user. """
-    message = await target.get_reply_message()
-    if message:
-        if not message.forward:
-            user_id = message.sender.id
-            if message.sender.username:
-                name = "@" + message.sender.username
-            else:
-                name = "**" + message.sender.first_name + "**"
-        else:
-            user_id = message.forward.sender.id
-            if message.forward.sender.username:
-                name = "@" + message.forward.sender.username
-            else:
-                name = "*" + message.forward.sender.first_name + "*"
-        await target.edit("**Name:** {} \n**User ID:** `{}`".format(name, user_id))
+@bot.on(events.NewMessage(pattern='/website'))
+async def websiteLink(event):
+    message = "Website: https://quantumbyteofficial.tech/"
+    await event.reply(f"{message}")
+    raise events.StopPropagation
+
 
 ############################################################################################
 
