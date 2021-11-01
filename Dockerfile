@@ -8,7 +8,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy our source code
-COPY /src .
+# COPY /src .
 
 # Run the application
 CMD ["python", "main.py"]
