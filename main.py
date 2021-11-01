@@ -294,14 +294,14 @@ async def websiteLink(event):
 
 @bot.on(events.NewMessage(pattern='/truth'))
 async def websiteLink(event):
-    number = int(random.uniform(0, 100))
+    number = int(random.uniform(0, len(Truth)))
     sawal = Truth[number]
     await event.reply(f"{sawal}")
     raise events.StopPropagation
 
 @bot.on(events.NewMessage(pattern='/dare'))
 async def websiteLink(event):
-    number = int(random.uniform(0, 40))
+    number = int(random.uniform(0, len(Dare)))
     sawal = Dare[number]
     await event.reply(f"{sawal}")
     raise events.StopPropagation
