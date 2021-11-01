@@ -5,6 +5,10 @@ from utils.weather import wtr
 from requests import get
 import os
 import requests
+import random
+
+def randomNumberDeChupChap():
+    return int(random.uniform(int, int))
 
 os.system("clear")
 
@@ -192,6 +196,118 @@ async def websiteLink(event):
     await event.reply(f"{message}")
     raise events.StopPropagation
 
+Truth = [
+"What’s the last lie you told?",
+"What was the most embarrassing thing you’ve ever done on a date?",
+"Have you ever accidentally hit something (or someone!) with your car?",
+"Name someone you’ve pretended to like but actually couldn’t stand.",
+"What’s your most bizarre nickname?",
+"What’s been your most physically painful experience?",
+"What bridges are you glad that you burned?",
+"What’s the craziest thing you’ve done on public transportation?",
+"If you met a genie, what would your three wishes be?",
+"If you could write anyone on Earth in for President of the United States, who would it be and why?",
+"What’s the meanest thing you’ve ever said to someone else?",
+"Who was your worst kiss ever?",
+"What’s one thing you’d do if you knew there no consequences?",
+"What’s the craziest thing you’ve done in front of a mirror?",
+"What’s the meanest thing you’ve ever said about someone else?",
+"What’s something you love to do with your friends that you’d never do in front of your partner?",
+"Who are you most jealous of?",
+"What do your favorite pajamas look like?",
+"Have you ever faked sick to get out of a party?",
+"Who’s the oldest person you’ve dated?",
+"How many selfies do you take a day?",
+"Meatloaf says he’d do anything for love, but he won’t do “that.” What’s your “that?”",
+"How many times a week do you wear the same pants?",
+"Would you date your high school crush today?",
+"Where are you ticklish?",
+"Do you believe in any superstitions? If so, which ones?",
+"What’s one movie you’re embarrassed to admit you enjoy?",
+"What’s your most embarrassing grooming habit?",
+"When’s the last time you apologized? What for?",
+"How do you really feel about the Twilight saga?",
+"Where do most of your embarrassing odors come from?",
+"Have you ever considered cheating on a partner?",
+"Have you ever cheated on a partner?",
+"Boxers or briefs?",
+"Have you ever peed in a pool?",
+"What’s the weirdest place you’ve ever grown hair?",
+"If you were guaranteed to never get caught, who on Earth would you murder?",
+"What’s the cheapest gift you’ve ever gotten for someone else?",
+"What app do you waste the most time on?",
+"What’s the weirdest thing you’ve done on a plane?",
+"Have you ever been nude in public?",
+"How many gossip blogs do you read a day?",
+"What is the youngest age partner you’d date?",
+"Have you ever picked your nose in public?",
+"Have you ever lied about your age?",
+"If you had to delete one app from your phone, which one would it be?",
+"What’s your most embarrassing late night purchase?",
+"What’s the longest you’ve gone without showering?",
+"Have you ever used a fake ID?", "Who’s your hall pass?",]
+
+Dare =[
+"Do freestyle rap for 1 minute about the other participants and send video.",
+"Kiss the person to your left and send video.",
+"Do an impression of another player until someone can figure out who it is and send video.",
+"Call your crush.",
+"Dance with no music for 1 minute and send video.",
+"Do a cartwheel and send video.",
+"Let the person on your right draw on your face.",
+"Give your phone to another player who can send one text saying anything they want to one of your contacts.",
+"Drink lemon juice.",
+"Crack an egg on our head and send video.",
+"Swap clothes with someone of the opposite gender for 2 rounds and send video.",
+"Act like a chicken until your next turn.",
+"Burp the alphabet.",
+"Talk in a Jamaican accent until your next turn.",
+"Call a friend, pretend it’s their birthday, and sing “Happy Birthday” to them.",
+"Perform ballet for 1 minute.",
+"Shower with your clothes on.",
+"Take a selfie on the toilet and post it.",
+"End each sentence with the word “not” until your next turn.",
+"Name a famous person that looks like each player.",
+"Dance like your life depends on it.",
+"Eat a packet of hot sauce or ketchup straight.",
+"Pour ice down your pants and send video.",
+"Spin around 12 times and try to walk straight.",
+"Put on a blindfold and touch the other players’ faces until you can figure out who it is.",
+"Let the other players redo your hairstyle.",
+"Eat a raw egg and send video.",
+"Let the player to your right redo your makeup.",
+"Pretend to be a squirrel until your next turn.",
+"Dump a bucket of cold water on your head and send video.",
+"Lick a bar of soap and send video.",
+"Eat a teaspoon of mustard.",
+"Talk without closing your mouth and send video.",
+"You have 5 minutes to write a country song and perform it.",
+"Let someone paint your nails any way they want.",
+"Do 5 minutes of stand-up comedy and send video.",
+"Quack like a duck until your next turn.",
+"Sing the national anthem in a British accent and send video."
+]
+
+@bot.on(events.NewMessage(pattern='/truth&dare'))
+async def websiteLink(event):
+    message = "Inorder to play Truth and Dare add this bot in your friends group, then type \"\\truth\" for a truth questinon and \"\\dare\" for a dare."
+    await event.reply(f"{message}")
+    raise events.StopPropagation
+
+
+@bot.on(events.NewMessage(pattern='/truth'))
+async def websiteLink(event):
+    number = randomNumberDeChupChap(0, 100)
+    sawal = Truth[number]
+    await event.reply(f"{sawal}")
+    raise events.StopPropagation
+
+@bot.on(events.NewMessage(pattern='/dare'))
+async def websiteLink(event):
+    number = randomNumberDeChupChap(0, 100)
+    sawal = Dare[number]
+    await event.reply(f"{sawal}")
+    raise events.StopPropagation
 
 ############################################################################################
 
