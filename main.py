@@ -7,7 +7,6 @@ import os
 import requests
 import random
 
-os.system("clear")
 
 token = os.environ.get("BOT_TOKEN")
 bot = TelegramClient('bot', 8009880, '86d78606689d61db9a904e167a4bbd50').start(
@@ -370,26 +369,87 @@ Dare =[
 "Sing the national anthem in a British accent and send video."
 ]
 
-@bot.on(events.NewMessage(pattern='/truth&dare'))
-async def websiteLink(event):
+Instults =[
+"If I throw a stick, will you leave?",
+"You’re a gray sprinkle on a rainbow cupcake.",
+"If your brain was dynamite, there wouldn’t be enough to blow your hat off.",
+"You are more disappointing than an unsalted pretzel.",
+"Light travels faster than sound, which is why you seemed bright until you spoke.",
+"We were happily married for one month, but unfortunately, we’ve been married for 10 years.",
+"Your kid is so annoying he makes his Happy Meal cry.",
+"You have so many gaps in your teeth it looks like your tongue is in jail.",
+"Your secrets are always safe with me. I never even listen when you tell me them.",
+"I’ll never forget the first time we met. But I’ll keep trying.",
+"I forgot the world revolves around you. My apologies! How silly of me.",
+"I only take you everywhere I go just so I don’t have to kiss you goodbye.",
+"Hold still. I’m trying to imagine you with a personality.",
+"Our kid must have gotten his brain from you! I still have mine.",
+"Your face makes onions cry.",
+"The only way my husband would ever get hurt during an activity is if the TV exploded.",
+"You look so pretty. Not at all gross today.",
+"It’s impossible to underestimate you.",
+"Her teeth were so bad she could eat an apple through a fence.",
+"I’m not insulting you; I’m describing you.",
+"I’m not a nerd; I’m just smarter than you.",
+"Don’t be ashamed of who you are. That’s your parents’ job.",
+"Your face is just fine, but we’ll have to put a bag over that personality.",
+"You bring everyone so much joy… when you leave the room.",
+"I thought of you today. It reminded me to take out the trash.",
+"Don’t worry about me. Worry about your eyebrows.",
+"You are the human version of period cramps.",
+"If you’re going to be two-faced, at least make one of them pretty.",
+"You are like a cloud. When you disappear, it’s a beautiful day.",
+"I’d rather treat my baby’s diaper rash than have lunch with you.",
+"Child, I’ve forgotten more than you ever knew.",
+"You just might be why the middle finger was invented in the first place.",
+"I know you are, but what am I?",
+"I see no evil, and I definitely don’t hear your evil.",
+"You have miles to go before you reach mediocre.",
+"When you look in the mirror, say hi to the clown you see in there for me, would ya?",
+"Bye, hope to see you never.",
+"Complete this sentence for me: “I never want to see you ____!”",
+"Remember that time you were saying that thing I didn’t care about? Yeah… that is now.",
+"I was today years old when I realized I didn’t like you.",
+"N’Sync said it best: “BYE, BYE, BYE.”",
+"Wish I had a flip phone so I could slam it shut on this conversation.",
+"How many licks till I get to the interesting part of this conversation?",
+"Wow, your maker really didn’t waste time giving you a personality, huh?",
+"You’re cute. Like my dog. He also always chases his tail for entertainment.",
+"Someday you’ll go far… and I really hope you stay there.",
+"Oh, I’m sorry. Did the middle of my sentence interrupt the beginning of yours?",
+"You bring everyone so much joy! You know, when you leave the room. But, still.",
+"Oops, my bad. I could’ve sworn I was dealing with an adult.",
+"Did I invite you to the barbecue? Then why are you all up in my grill?"
+]
+
+@bot.on(events.NewMessage(pattern='/truthNdare'))
+async def tnd(event):
     message = "Inorder to play Truth and Dare add this bot in your friends group, then type \"\\truth\" for a truth questinon and \"\\dare\" for a dare."
     await event.reply(f"{message}")
     raise events.StopPropagation
 
 
 @bot.on(events.NewMessage(pattern='/truth'))
-async def websiteLink(event):
+async def truthQuestion(event):
     number = int(random.uniform(0, len(Truth)))
     sawal = Truth[number]
     await event.reply(f"{sawal}")
     raise events.StopPropagation
 
 @bot.on(events.NewMessage(pattern='/dare'))
-async def websiteLink(event):
+async def dareQuestion(event):
     number = int(random.uniform(0, len(Dare)))
     sawal = Dare[number]
     await event.reply(f"{sawal}")
     raise events.StopPropagation
+
+@bot.on(events.NewMessage(pattern='/insult'))
+async def insultLines(event):
+    number = int(random.uniform(0, len(Insults)))
+    insult = Insults[number]
+    await event.reply(f"{insult}")
+    raise events.StopPropagation
+
 
 ############################################################################################
 
