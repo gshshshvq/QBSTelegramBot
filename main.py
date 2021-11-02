@@ -51,6 +51,9 @@ List Of all Commands
 /whoami - Displays You User Id of Telegram
 /joke - Displays a Random Joke
 /news - Displays a Top 20 Headlines
+/website - gives you our website link
+/truthNdare - Truth and Dare Game instructions and command
+/insult - give a insulting line 
 
 Some Other USeful Links:
 
@@ -424,7 +427,7 @@ Insults =[
 
 @bot.on(events.NewMessage(pattern='/truthNdare'))
 async def tnd(event):
-    message = "Inorder to play Truth and Dare add this bot in your friends group, then type \"\\truth\" for a truth questinon and \"\\dare\" for a dare."
+    message = "Inorder to play Truth and Dare add this bot in your friends group, then type \"/truth\" for a truth questinon and \"/dare\" for a dare."
     await event.reply(f"{message}")
     raise events.StopPropagation
 
