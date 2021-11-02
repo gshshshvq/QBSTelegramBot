@@ -369,7 +369,7 @@ Dare =[
 "Sing the national anthem in a British accent and send video."
 ]
 
-Instults =[
+Insults =[
 "If I throw a stick, will you leave?",
 "You’re a gray sprinkle on a rainbow cupcake.",
 "If your brain was dynamite, there wouldn’t be enough to blow your hat off.",
