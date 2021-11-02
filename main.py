@@ -427,7 +427,7 @@ Insults =[
 
 @bot.on(events.NewMessage(pattern='/truthNdare'))
 async def tnd(event):
-    message = "Inorder to play Truth and Dare add this bot in your friends group, then type \"/truth\" for a truth questinon and \"/dare\" for a dare."
+    message = "Inorder to play Truth and Dare add this bot in your friends group, then type \"/truth\" for a truth question and \"/dare\" for a dare."
     await event.reply(f"{message}")
     raise events.StopPropagation
 
