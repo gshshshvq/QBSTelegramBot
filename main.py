@@ -7,6 +7,7 @@ import os
 import requests
 import random
 import calendar
+from datetime import datetime
 
 token = os.environ.get("BOT_TOKEN")
 bot = TelegramClient('bot', 8009880, '86d78606689d61db9a904e167a4bbd50').start(
@@ -453,12 +454,10 @@ async def insultLines(event):
     await event.reply(f"{insult}")
     raise events.StopPropagation
 
-@bot.on(events.NewMessage(pattern='/calendar'))
-async def calendar(event):
-    yy = 2021
-    mm = 11
-    calendar = print(calendar.month(yy, mm))
-    await event.reply(calendar)
+@bot.on(events.NewMessage(pattern='/today'))
+async def today(event):
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    await event.reply(f"Today : {dt_string}")
     raise events.StopPropagation
 
 
