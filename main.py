@@ -31,7 +31,7 @@ async def start(event):
     f = open("userData.txt", "a")
     f.write(userDetails)
     f.close()
-    await event.respond('💡Pro Tip Click 👉🏻 \\help to display list of all commands 😄')
+    await event.respond('💡Pro Tip Click 👉🏻 /help to display list of all commands 😄')
     raise events.StopPropagation
 
 
