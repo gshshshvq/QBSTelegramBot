@@ -457,7 +457,8 @@ async def insultLines(event):
 async def calendar(event):
     yy = 2021
     mm = 11
-    await event.reply(calendar.month(yy, mm))
+    calendar = print(calendar.month(yy, mm))
+    await event.reply(calendar)
     raise events.StopPropagation
 
 
