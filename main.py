@@ -456,6 +456,7 @@ async def insultLines(event):
 
 @bot.on(events.NewMessage(pattern='/today'))
 async def today(event):
+    now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     await event.reply(f"Today : {dt_string}")
     raise events.StopPropagation
