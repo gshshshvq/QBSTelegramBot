@@ -54,7 +54,8 @@ List Of all Commands
 /news - Displays a Top 20 Headlines
 /website - gives you our website link
 /truthNdare - Truth and Dare Game instructions and command
-/insult - give a insulting line 
+/insult - gives an insulting line 
+/today - returns today's date and time
 
 Some Other USeful Links:
 
