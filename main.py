@@ -6,7 +6,7 @@ from requests import get
 import os
 import requests
 import random
-
+import calendar
 
 token = os.environ.get("BOT_TOKEN")
 bot = TelegramClient('bot', 8009880, '86d78606689d61db9a904e167a4bbd50').start(
@@ -451,6 +451,13 @@ async def insultLines(event):
     number = int(random.uniform(0, len(Insults)))
     insult = Insults[number]
     await event.reply(f"{insult}")
+    raise events.StopPropagation
+
+@bot.on(events.NewMessage(pattern='/calendar'))
+async def calendar(event):
+    year = 2021
+    month = 11
+    await event.reply(calendar.month(year, month))
     raise events.StopPropagation
 
 
