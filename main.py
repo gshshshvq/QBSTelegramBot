@@ -455,9 +455,9 @@ async def insultLines(event):
 
 @bot.on(events.NewMessage(pattern='/calendar'))
 async def calendar(event):
-    year = 2021
-    month = 11
-    await event.reply(calendar.month(year, month))
+    yy = 2021
+    mm = 11
+    await event.reply(calendar.month(yy, mm))
     raise events.StopPropagation
 
 
