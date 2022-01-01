@@ -1,0 +1,17 @@
+List Of all Commands
+
+/start - To Start The Bot
+/help - Display List of all Commands
+/wassup - EasterEgg
+/whoami - Displays You User Id of Telegram
+/joke - Displays a Random Joke
+
+Some Other USeful Links:
+
+GitHub: https://github.com/QuantumByteStudios
+QuantumByteChat: https://t.me/quantumbytechat
+Website: https://github.com/QuantumByteStudios
+
+Share this bot with your friends: http://t.me/QuantumByteStudios_bot
+
+You Can Add This Group To Your Telegram Gorups and Channels :)
