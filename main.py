@@ -28,7 +28,7 @@ async def start(event):
     full = await bot(GetFullUserRequest(user))
     userDetails = f'''New User ID = {user}\nOther Details:\n{full}'''
     print(userDetails)
-    f = open("userData.txt", "a")
+    f = open("Textfiles/userData.txt", "a")
     f.write(userDetails)
     f.close()
     await event.respond('💡Pro Tip Click 👉🏻 /help to display list of all commands 😄')
@@ -166,7 +166,7 @@ async def handler(event):
         groupID = event.user_ids
         print(groupID)
         groupUserData = f'''Bot was added in a Group. Group IDs = {groupID}\n'''
-        f = open("groupUserData.txt", "a")
+        f = open("Textfiles/groupUserData.txt", "a")
         f.write(groupUserData)
         f.close()
 
