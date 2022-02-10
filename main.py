@@ -43,33 +43,33 @@ async def whoami(event):
 
 @bot.on(events.NewMessage(pattern='/help'))
 async def help(event):
-    helpText = '''
-List Of all Commands
+#     helpText = '''
+# List Of all Commands
 
-/start - To Start The Bot
-/help - Display List of all Commands
-/whoami - Displays You User Id of Telegram
-/joke - Displays a Random Joke
-/news - Displays a Top 20 Headlines
-/website - gives you our website link
-/truthNdare - Truth and Dare Game instructions and command
-/insult - gives an insulting line 
-/today - returns today's date and time
+# /start - To Start The Bot
+# /help - Display List of all Commands
+# /whoami - Displays You User Id of Telegram
+# /joke - Displays a Random Joke
+# /news - Displays a Top 20 Headlines
+# /website - gives you our website link
+# /truthNdare - Truth and Dare Game instructions and command
+# /insult - gives an insulting line 
+# /today - returns today's date and time
 
-Useless Commands:
-/KaisaHaiBhai - EasterEgg
-/wassup - EasterEgg
+# Useless Commands:
+# /KaisaHaiBhai - EasterEgg
+# /wassup - EasterEgg
 
-Some Other USeful Links:
+# Some Other USeful Links:
 
-GitHub: https://github.com/QuantumByteStudios
-QuantumByteChat: https://t.me/quantumbytechat
-Website: https://github.com/QuantumByteStudios
+# GitHub: https://github.com/QuantumByteStudios
+# QuantumByteChat: https://t.me/quantumbytechat
+# Website: https://github.com/QuantumByteStudios
 
-Share this bot with your friends: http://t.me/QuantumByteStudios_bot
+# Share this bot with your friends: http://t.me/QuantumByteStudios_bot
 
-You Can Add This Group To Your Telegram Gorups and Channels :) 
-    '''
+# You Can Add This Group To Your Telegram Gorups and Channels :) 
+#     '''
     await event.respond(f"{helpText}")
 
 

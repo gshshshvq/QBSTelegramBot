@@ -2,9 +2,17 @@ List Of all Commands
 
 /start - To Start The Bot
 /help - Display List of all Commands
-/wassup - EasterEgg
 /whoami - Displays You User Id of Telegram
 /joke - Displays a Random Joke
+/news - Displays a Top 20 Headlines
+/website - gives you our website link
+/truthNdare - Truth and Dare Game instructions and command
+/insult - gives an insulting line 
+/today - returns today's date and time
+
+Useless Commands:
+/KaisaHaiBhai - EasterEgg
+/wassup - EasterEgg
 
 Some Other USeful Links:
 
@@ -14,4 +22,4 @@ Website: https://github.com/QuantumByteStudios
 
 Share this bot with your friends: http://t.me/QuantumByteStudios_bot
 
-You Can Add This Group To Your Telegram Gorups and Channels :)
+You Can Add This Bot To Your Telegram Groups and Channels :) 
