@@ -117,7 +117,11 @@ async def news(event):
 
     for i in range(len(results)):
         results[i] = results[i].replace("\'", "")
-        results[i] = results[i].replace(")","")
+        results[i] = results[i].replace(")", "")
+        results[i] = results[i].replace("(", "")
+
+    for i in range(len(results)):
+
         await event.respond(f"{i + 1, results[i]}")
 
     raise events.StopPropagation
