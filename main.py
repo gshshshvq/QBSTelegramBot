@@ -109,12 +109,12 @@ async def news(event):
     # fetching data in json format
     res = requests.get(main_url, params=query_params)
     open_api_page = res.json()
+    open_api_page = open_api_page.replace("\'", "")
+    open_api_page = open_api_page.replace(")", "")
     article = open_api_page["articles"]
     results = []
 
     for ar in article:
-        ar = ar.replace("\'","")
-        ar = ar.replace(")","")
         results.append(ar["title"])
 
     for i in range(len(results)):
