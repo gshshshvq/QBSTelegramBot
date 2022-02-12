@@ -116,9 +116,9 @@ async def news(event):
         results.append(ar["title"])
 
     for i in range(len(results)):
-        results[i] = results[i].replace("\'", "")
-        results[i] = results[i].replace(")", "")
-        results[i] = results[i].replace("(", "")
+        results[i].replace("\'", " ")
+        results[i].replace(")", " ")
+        results[i].replace("(", " ")
 
     for i in range(len(results)):
 
