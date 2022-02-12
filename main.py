@@ -116,11 +116,6 @@ async def news(event):
         results.append(ar["title"])
 
     for i in range(len(results)):
-        results[i].replace("\'", " ")
-        results[i].replace(")", " ")
-        results[i].replace("(", " ")
-
-    for i in range(len(results)):
 
         await event.respond(f"{i + 1, results[i]}")
 
