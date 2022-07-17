@@ -64,7 +64,7 @@ Some Other Useful Links:
 
 GitHub: https://github.com/QuantumByteStudios
 QuantumByteChat: https://t.me/quantumbytechat
-Website: https://github.com/QuantumByteStudios
+Website: https://quantumbyte.studio/
 
 Share this bot with your friends: http://t.me/QuantumByteStudios_bot
 
