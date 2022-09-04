@@ -21,9 +21,9 @@ async def start(event):
     if event.is_channel:
         await event.respond('Activated Bot For Channel')
     if event.is_group:
-        await event.respond('Activated Bot For Group Chat : )')
+        await event.respond('Activated Bot For Group Chat :)')
     if event.is_private:
-        await event.respond('Activated Bot For Private Chat : )')
+        await event.respond('Activated Bot For Private Chat :)')
     user = event.chat_id
     full = await bot(GetFullUserRequest(user))
     userDetails = f'''New User ID = {user}\nOther Details:\n{full}'''
@@ -31,7 +31,7 @@ async def start(event):
     f = open("Textfiles/userData.txt", "a")
     f.write(userDetails)
     f.close()
-    await event.respond('💡Pro Tip Click 👉🏻 /help to display list of all commands 😄')
+    await event.respond('Click 👉🏻 /help to display list of all commands 😄')
     raise events.StopPropagation
 
 
@@ -39,6 +39,11 @@ async def start(event):
 async def whoami(event):
     chatid = event.chat_id
     await event.reply(f"Your chat id is: `{chatid}`")
+
+
+@bot.on(events.NewMessage(pattern='hey'))
+async def hey(event):
+    await event.reply(f"Hello!")
 
 
 @bot.on(events.NewMessage(pattern='/help'))
@@ -203,7 +208,7 @@ async def handler(event):
 
 @bot.on(events.NewMessage(pattern='/website'))
 async def websiteLink(event):
-    message = "Website: https://quantumbyteofficial.tech/"
+    message = "Website: https://quantumbyte.studio/"
     await event.reply(f"{message}")
     raise events.StopPropagation
 
