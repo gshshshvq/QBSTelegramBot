@@ -6,3 +6,6 @@
   <b>Official Telegram Bot <a href="http://t.me/QuantumByteStudios_bot">QuantumByteStudios_bot</a></b>
 </p>
 
+Linux Users
+    
+    git clone https://github.com/QuantumByteStudios/QBSTelegramBot --depth=1
